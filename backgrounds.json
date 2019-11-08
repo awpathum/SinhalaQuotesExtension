@@ -1,0 +1,23 @@
+{
+    "backgrounds": [{
+            "filename": "./backgrounds/lion.jpg",
+            "id": "animal01"
+        },
+        {
+            "filename": "./backgrounds/girl.jpg",
+            "id": "girl01"
+
+        },
+        {
+            "filename": "./backgrounds/motivate.jpg",
+            "id": "motivation01"
+
+        },
+        {
+            "filename": "./backgrounds/motivate2.jpg",
+            "id": "motivation02"
+
+        }
+
+    ]
+}
