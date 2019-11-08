@@ -30,12 +30,12 @@
 
 function loadHome() {
     //chrome.tabs.update({ url: "popup.html" });
-    if (tab.url === 'chrome://newtab/') {
+    // if (tab.url === 'chrome://newtab/') {
 
-        // Show your website. This might highlight the omnibox,
-        // but it's not guaranteed.
-        chrome.tabs.update(tab.id, { url: 'https://ucsc.cmb.ac.lk/' });
-    }
+    //     // Show your website. This might highlight the omnibox,
+    //     // but it's not guaranteed.
+    //     chrome.tabs.update(tab.id, { url: 'https://ucsc.cmb.ac.lk/' });
+    // }
 
 
     //window.open('https://ucsc.cmb.ac.lk/', '_self', false);
