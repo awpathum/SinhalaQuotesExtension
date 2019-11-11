@@ -1,6 +1,7 @@
 <html>
 
 <head>
+
     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -29,6 +30,16 @@
             position: absolute;
             left: 0;
             top: 50%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        #clock {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            bottom: 10%;
             width: 100%;
             text-align: center;
             font-size: 18px;
@@ -88,13 +99,18 @@
     <script src='process.js'>
     </script>
 
+    <div id="clock">
+        <label id="time" style="color: white; font-size: 100px;">00.00</label>
+        <br>
+        <label id="greeting" style="color: white; font-size: 80px; font-family:Georgia, 'Times New Roman', Times, serif;"></label>
+    </div>
 
     <div id="searchfield">
         <form action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" placeholder="Google Search" id="textbox">
+            <input type="text" name="q" placeholder="Google Search" id="textbox" style="font-family:Georgia, 'Times New Roman', Times, serif">
             <div id="buttonsection">
                 <!--input type="submit" value="Google Search" id="submitbutton" class="button"--->
-                <button class="button button1" id="submitbutton">Search</button>
+                <button class="button button1" id="submitbutton" style="font-family:Georgia, 'Times New Roman', Times, serif">Search</button>
             </div>
 
         </form>
