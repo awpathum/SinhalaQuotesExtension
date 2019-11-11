@@ -6,4 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundImage = `url(${mydata[imageId].filename})`;
 
 
+    document.getElementById('textbox').addEventListener(
+        'change', () => {
+            var txtVal = document.getElementById("textbox").value;
+
+
+            if (txtVal == "") {
+                document.getElementById("submitbutton").disabled = true;
+            } else {
+                document.getElementById("submitbutton").disabled = false;
+            }
+        }
+    );
+
+
 });
