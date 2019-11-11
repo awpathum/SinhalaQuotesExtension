@@ -5,43 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.style.backgroundImage = `url(${mydata[imageId].filename})`;
 
-    //document.body.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/homepageextension-5a946.appspot.com/o/girl.jpg?alt=media&token=01ff330c-5246-478b-b393-5971fe7ea6f9')";
-
-    // db.collection('mix').get().then((snapshot) => {
-    //     //console.log(snapshot.docs);
-
-    //     snapshot.docs.forEach(doc => {
-    //         //console.log(doc.data);
-    //         var list = doc.data;
-    //         console.log(list);
-
-
-    //     });
-    // });
-    var docRef = db.collection("Wallpapers").doc("mix");
-    docRef.get().then(function(doc) {
-        if (doc.exists) {
-            var imageList = doc.data();
-            console.log(imageList.file01);
-            var i;
-            for (i = 0; i < 10; i++) {
-                var id = "file" + `${i}`;
-                console.log(imageList.file);
-            }
-            //console.log("Document data:", doc.data());
-            //var imageList = doc.data();
-            // var imageList = [];
-            // imageList = doc.data();
-            // console.log(imageList[0].data());
-            //console.log(imageList);
-
-        } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-        }
-    }).catch(function(error) {
-        console.log("Error getting document:", error);
-    });
-
 
 });
