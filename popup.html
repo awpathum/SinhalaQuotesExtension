@@ -7,47 +7,101 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
-
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #textbox {
+            border: 1px solid #107e7d;
+            height: 40px;
+            width: 800px;
+            border-radius: 0px;
+            border-bottom-style: solid;
+            border-top-style: none;
+            border-left-style: none;
+            border-right-style: none;
+            padding: 0px 10px;
+        }
+        
+        #searchfield {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        #textbox {
+            background: transparent;
+            color: white;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        .button1 {
+            background: transparent;
+            color: white;
+            border: 0px #107e7d;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        
+        .button1:hover {
+            background-color: #107e7d;
+            color: white;
+        }
+        
+        #buttonsection {
+            margin: 20px;
+            position: relative;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <title>Welcome</title>
 
 <body>
 
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDewyll5UkVPQnWFssR1zttxWZavAUbqUg",
-            authDomain: "sinhalahomepage-1deb0.firebaseapp.com",
-            databaseURL: "https://sinhalahomepage-1deb0.firebaseio.com",
-            projectId: "sinhalahomepage-1deb0",
-            storageBucket: "sinhalahomepage-1deb0.appspot.com",
-            messagingSenderId: "858831241590",
-            appId: "1:858831241590:web:9dc3b812bc6008b12fba57",
-            measurementId: "G-1V89W38860"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        const db = firebase.firestore();
-
-        // db.settings({
-        //     timestampsInSnapshots: true
-        // });
-    </script>
-
     <script type="text/javascript" src="data.json"></script>
     <script src='process.js'>
     </script>
-    <center>
+
+
+    <div id="searchfield">
         <form action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" placeholder="Google Search">
-            <input type="submit" value="Google Search">
+            <input type="text" name="q" placeholder="Google Search" id="textbox">
+            <div id="buttonsection">
+                <!--input type="submit" value="Google Search" id="submitbutton" class="button"--->
+                <button class="button button1">Search</button>
+            </div>
+
         </form>
-    </center>
+    </div>
+
+
+
 
 </body>
 
