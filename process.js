@@ -91,5 +91,26 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("greeting").innerHTML = "Good Evening";
     }
 
+    chrome.storage.sync.get(['name'], function(data) {
+            console.log(data.name);
+            if (data.name == "") {
+                document.getElementById("setname").style.visibility = "visible";
+                document.getElementById("name").style.visibility = "hidden";
+                var newname = document.getElementById("newname").value;
+                if (newname != "") {
+                    chrome.storage.sync.set({ 'name': newname }, function() {
+                        console.log('new name added');
+                    });
+                } else {
+                    alert('Please Enter Your Nick Name');
+                }
+            } else {
+                document.getElementById("setname").style.visibility = "hidden";
+                document.getElementById("name").style.visibility = "visible";
+                document.getElementById("name").innerHTML = data.name;
+            }
+        }
 
+
+    )
 });
