@@ -23,6 +23,7 @@
             },
 
             "permissions": [
+                "identity",
                 "storage",
                 "notifications",
                 "contextMenus",
